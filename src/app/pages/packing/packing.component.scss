@@ -1,0 +1,12 @@
+.packing .img-item {
+  width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures images keep their aspect ratio and fill the box */
+}
+.packing .main-img {
+  height: 100%; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures images keep their aspect ratio and fill the box */
+}
+.cursor-pointer{
+  cursor: pointer;
+}

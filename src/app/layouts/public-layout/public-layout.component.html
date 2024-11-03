@@ -1,0 +1,12 @@
+<div class="admin-wrapper"  [dir]="LanguageService.currentLang === 'en' ? 'ltr' : 'rtl'">
+
+<!-- <app-alerts></app-alerts> -->
+<app-public-navbar></app-public-navbar>
+<app-spinner></app-spinner>
+    <router-outlet></router-outlet>
+<!-- back to top -->
+<button (click)="scrollToTop()" *ngIf="isShowBackTop"
+class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top p-0"
+><i class="bi bi-arrow-up"></i></button>
+  <app-footer></app-footer>
+</div>

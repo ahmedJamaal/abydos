@@ -1,0 +1,29 @@
+<div class="container-fluid facts my-5 py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-sm-6 col-lg-4 text-center wow fadeIn">
+
+              <i class="bi bi-briefcase fa-3x text-white mb-3"></i>
+                <h1 class="display-4 text-white" [countUp]="169"
+                    [options]="{ enableScrollSpy: true , prefix: '+', separator: ','  }">0</h1>
+                <span class="fs-5 text-white">{{ 'Exports' | translate }}</span>
+                <hr class="bg-white w-25 mx-auto mb-0">
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center wow fadeIn">
+                <i class="bi bi-person-raised-hand fa-3x text-white mb-3"></i>
+                <h1 class="display-4 text-white" [countUp]="59"
+                    [options]="{ enableScrollSpy: true , prefix: '+', separator: ',' }">0
+                </h1>
+                <span class="fs-5 text-white">{{ 'Imports' | translate }}</span>
+                <hr class="bg-white w-25 mx-auto mb-0">
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center wow fadeIn">
+              <i class="bi bi-bank fa-3x text-white mb-3"></i>
+                <h1 class="display-4 text-white" [countUp]="2500"
+                    [options]="{ enableScrollSpy: true , prefix: '+', separator: ',' }">0</h1>
+                <span class="fs-5 text-white">{{ 'Projects' | translate }}</span>
+                <hr class="bg-white w-25 mx-auto mb-0">
+            </div>
+        </div>
+    </div>
+</div>

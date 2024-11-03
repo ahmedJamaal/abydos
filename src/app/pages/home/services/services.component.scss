@@ -1,0 +1,30 @@
+.service-img{
+  height: 200px;
+  width: 100%;
+}
+.package-img{
+  height: 250px;
+  width: 100%;
+}
+
+.nav .nav-link {
+  // transition: .5s;
+  transition: opacity 0.15s linear;
+}
+
+.nav .nav-link.active ,
+.nav .nav-link:hover
+{
+  border-color: var(--primary) !important;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.nav .nav-link.active h5 {
+  color: #FFFFFF !important;
+}
+
+.nav .nav-link.active h5 i {
+  color: #FFFFFF !important;
+}
+

@@ -1,0 +1,93 @@
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5" *ngIf="!isLoading">
+      <div class="row gx-4 gx-lg-5 align-items-start">
+          <div class="col-md-6" *ngIf="_albums.length > 0">
+           <div class="row">
+            <img class="card-img-top mb-5 mb-md-0 "
+
+            [src]="_albums[0].src"
+            loading="lazy"
+
+            (click)="open(0)"
+            alt="{{product.name}}"/>
+           </div>
+           <div class="row img-grid py-3"  *ngIf="_albums.length > 0">
+            <div class="col-lg-3 col-md-3 mb-3" *ngFor="let img of _albums | slice:1; let i = index">
+              <img
+              [src]="img.src"
+               loading="lazy"
+              class="img-fluid cursor-pointer"  alt="{{product.name}}" (click)="open(i)">
+            </div>
+
+          </div>
+          </div>
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bolder">{{product.headerText | translate}}</h1>
+            <div class="small mb-1">{{product.specification.type | translate}}</div>
+
+              <p class="lead">
+                {{product.description | translate}}
+              </p>
+
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Stone Kind' | translate}}:</h5>
+                    <p>Egyptian Marble</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Material Name' | translate}}:</h5>
+                    <p>Sinai Pearl – Triesta</p>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Color' | translate}}:</h5>
+                    <p>Beige Marble</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Country Of Origin'| translate}}:</h5>
+                    <p>Egypt</p>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Quarry Location'| translate}}:</h5>
+                    <p>Sinai</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Material Availability'| translate}}:</h5>
+                    <p>Blocks, Slabs, and Tiles</p>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Available Slabs Thickness'| translate}}:</h5>
+                <p>2cm, 3cm, 4cm, 5cm, ….</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="text-primary">{{'Available Tiles Thickness' | translate}}:</h5>
+                    <p>1.5cm, 2cm, 3cm, 4cm, 5cm, ….</p>
+                  </div>
+                </div>
+                <h5 class="text-primary">{{'Available Surface Finishes' | translate}}:</h5>
+                <p>
+                  Saw-Cut, Polished Treatment, Honed, Brushed, Sandblasted, Tumbled, Acid Wash, Scratch, Crazy,
+                  Bushhammered, Flamed and Split Face.
+                </p>
+
+                <h5 class="text-primary">{{'Applications' | translate}}:</h5>
+                <p>Exterior & Interior (Floors, Walls, Stairs, Fireplaces, Countertops, Window Sills)</p>
+
+
+          </div>
+      </div>
+
+
+  </div>
+</section>
+
+

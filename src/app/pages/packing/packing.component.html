@@ -1,0 +1,38 @@
+
+<!-- /.container -->
+<section class="packing py-5">
+  <div class="container px-4 px-lg-5 my-5" *ngIf="!isLoading">
+    <div class="row gx-4 gx-lg-5 align-items-start">
+
+      <div class="col-md-6">
+        <img class="img-fluid cursor-pointer w-100 main-img"
+        [src]="_albums[0].src"
+              loading="lazy"
+
+              (click)="open(0)"
+              alt="{{packing.heading}}"
+        >
+      </div>
+      <div class="col-md-6">
+        <h1 class="display-5 fw-bolder">{{packing.heading}}</h1>
+        <!-- <h3 class="my-3">{{'Description' | translate}}</h3> -->
+        <p>{{packing.description}}</p>
+        <h3 class="my-3">{{'Details' | translate}} </h3>
+        <ul>
+          <li *ngFor="let d of packing.details">{{d | translate}}</li>
+
+        </ul>
+      </div>
+
+      <div class="row img-grid py-3"  *ngIf="_albums.length > 0">
+
+      <div class="col-md-3 col-sm-6 mb-4" *ngFor="let img of _albums | slice:1; let i = index">
+
+              <img class="img-item cursor-pointer" [src]="img.src"
+              loading="lazy" alt="{{packing.heading}}" (click)="open(i)">
+      </div>
+    </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,17 @@
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+      style="max-width: 600px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+     <h1 class="display-5 mb-5">{{ 'Egyption_Granite' | translate }}</h1>
+    </div>
+    <div class="testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+      <owl-carousel-o [options]="customOptions" class="testimonial-item">
+        <ng-container *ngFor="let slide of graniteSlides">
+          <ng-template carouselSlide>
+            <app-product-card [product]="slide" [productType]="'Granite'"></app-product-card>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>

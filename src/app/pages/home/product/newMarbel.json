@@ -1,0 +1,247 @@
+[
+  {
+    "id": "galala",
+    "name": "Galala",
+    "images": "Galala-main.jpg",
+    "imagesUrl": ["Galala-(7).jpeg","Galala-(1).jpg","Galala-(1).jpg","Galala-(1).jpg","Galala-(1).jpg"],
+    "headerText": "Galala Marble",
+    "description": [
+      "Galala Marble features a lighter beige tone with delicate gray veins, perfect for creating a bright and airy atmosphere.",
+      "This marble is sourced from Egyptian quarries and is known for its durability and versatility."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Galala",
+      "Color": "Light beige with gray veins",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian desert",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  },
+  {
+    "id": "sunny_menia",
+    "name": "Sunny Menia",
+    "images": "",
+    "imagesUrl": [],
+    "headerText": "Sunny Menia",
+    "description": [
+      "Sunny Menia Marble is characterized by its warm beige tones with subtle golden veins, adding a touch of warmth to any space.",
+      "This marble is extracted from quarries in Egypt and is highly durable and versatile."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Sunny Menia",
+      "Color": "Beige with golden veins",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian desert",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  },
+  {
+    "id": "silvia_menia",
+    "name": "Silvia Menia",
+    "images": "",
+    "imagesUrl": [],
+    "headerText": "Silvia Menia",
+    "description": [
+      "Silvia Menia Marble is characterized by its warm beige tones with subtle golden veins, adding a touch of warmth to any space.",
+      "This marble is extracted from quarries in Egypt and is highly durable and versatile."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Silvia Menia",
+      "Color": "Beige with golden veins",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  },
+  {
+    "id": "triesta",
+    "name": "Triesta",
+    "images": "",
+    "imagesUrl": [],
+    "headerText": "Triesta",
+    "description": [
+      "Triesta Marble is known for its elegant beige tones with subtle gray veins, adding a touch of sophistication to any space.",
+      "This marble is sourced from quarries in Egypt and is highly durable and versatile."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Triesta",
+      "Color": "Beige with gray veins",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian desert",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  },
+  {
+    "id": "milly",
+    "name": "Milly",
+    "images": "",
+    "imagesUrl": [],
+    "headerText": "Milly",
+    "description": [
+      "Milly Marble features a refined gray tone with subtle veining, perfect for adding sophistication to any space.",
+      "This marble is extracted from Egyptian quarries and offers exceptional durability and versatility."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Milly",
+      "Color": "Gray with subtle veining",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian desert",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  },
+  {
+    "id": "shikh_fadl",
+    "name": "Shikh Fadl",
+    "images": "",
+    "imagesUrl": [],
+    "headerText": "Shikh Fadl",
+    "description": [
+      "Shikh Fadl Marble is characterized by its warm beige tones with subtle golden veins, adding a touch of warmth to any space.",
+      "This marble is extracted from quarries in Egypt and is highly durable and versatile."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Shikh Fadl",
+      "Color": "Beige with golden veins",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian desert",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  },
+  {
+    "id": "carrara",
+    "name": "Carrara",
+    "images": "",
+    "imagesUrl": [],
+    "headerText": "Carrara",
+    "description": [
+      "Carrara Marble is characterized by its warm beige tones with subtle golden veins, adding a touch of warmth to any space.",
+      "This marble is extracted from quarries in Egypt and is highly durable and versatile."
+    ],
+    "specification": {
+      "type": "Marble",
+      "material_name": "Carrara",
+      "Color": "Beige with golden veins",
+      "country": "Egypt",
+      "Quarry_location": "Egyptian desert",
+      "Availability": [
+        "Blocks",
+        "Slabs",
+        "Tiles"
+      ],
+      "Thickness": [
+        15,
+        20,
+        30
+      ],
+      "Applications": [
+        "Flooring",
+        "Bathrooms",
+        "Staircases",
+        "Fireplaces",
+        "Exterior"
+      ]
+    }
+  }
+]
