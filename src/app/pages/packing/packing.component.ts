@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Packing } from '@model/Constant/product';
 import { CurrentPacking } from '@model/Constant/productList';
+import { TranslateService } from '@ngx-translate/core';
 import { LoaderService } from '@service/shared/loader.service';
 import { Lightbox } from 'ngx-lightbox';
 
@@ -18,13 +19,16 @@ export class PackingComponent {
   mediaUrl = 'assets/images';
 
   _albums: any[] = [];
-
+  isEnglish:boolean=true;
 
   constructor(
     private route:ActivatedRoute,
     public _lightbox: Lightbox,
+    public translateService:TranslateService,
     private spinner:LoaderService
       ){
+        this.isEnglish = this.translateService.getBrowserLang() ==='en' ? true : false;
+
         this.route.queryParams
         .subscribe((params: any) => {
           this.spinner.setLoading(true);

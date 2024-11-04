@@ -13,13 +13,16 @@
               alt="{{packing.heading}}"
         >
       </div>
-      <div class="col-md-6">
-        <h1 class="display-5 fw-bolder">{{packing.heading}}</h1>
-        <!-- <h3 class="my-3">{{'Description' | translate}}</h3> -->
-        <p>{{packing.description}}</p>
-        <h3 class="my-3">{{'Details' | translate}} </h3>
+      <div class="col-md-6 pt-2">
+        <h1 class="display-6 fw-bolder">{{isEnglish ? packing.heading : packing.headingAr}}</h1>
+        <p>{{isEnglish ? packing.description : packing.descriptionAr}}</p>
         <ul>
+          <span ngIf="isEnglish">
+
+            <li *ngFor="let d of packing.details">{{d | translate}}</li>
+          </span>
           <li *ngFor="let d of packing.details">{{d | translate}}</li>
+          <span ngIf="isEnglish"></span>
 
         </ul>
       </div>

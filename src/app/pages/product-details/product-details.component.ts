@@ -5,6 +5,7 @@ import { GRANITE_LIST, MARBLE_LIST, STONES_LIST } from '@model/Constant/productL
 import { Product } from '@model/Constant/product';
 import { LoaderService } from '@service/shared/loader.service';
 import { Lightbox } from 'ngx-lightbox';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-details',
@@ -22,11 +23,15 @@ product!:Product | any;
 mediaUrl = 'assets/images/products/';
 
 _albums: any[] = [];
+isEnglish:boolean=true;
   constructor(
 private route:ActivatedRoute,
 public _lightbox: Lightbox,
+public translateService:TranslateService,
 private spinner:LoaderService
   ){
+this.isEnglish = this.translateService.getBrowserLang() ==='en' ? true : false;
+
     this.route.queryParams
     .subscribe((params: any) => {
       this.spinner.setLoading(true);
