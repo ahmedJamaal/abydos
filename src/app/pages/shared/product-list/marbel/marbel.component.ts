@@ -27,16 +27,16 @@ export class MarbelComponent {
         ],
         responsive: {
 			0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
                 items:2
             },
-            992:{
+            576:{
                 items:3
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
             }
         },
         rtl: this.LanguageService.currentLang === 'en' ? false : true

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '@model/Constant/product';
 
 @Component({
@@ -10,7 +11,11 @@ export class ProductCardComponent {
 @Input() product!:any;
 @Input() productType!:string;
 imagePath!:string;
+constructor(
+  private router:Router,
+){
 
+}
 ngOnInit() {
 this.product ? this.imagePath = this.getImage() : null;
 }
@@ -23,5 +28,8 @@ getImage() :string{
   // 'url("assets/images/products/'+ this.productType+'/'+this.product.images+'")':
   // 'url("assets/images/products/default.jpg")';
 }
-
+ProductNavgation(){
+  // this.router.navigateByUrl('')
+  this.router.navigate(['Product'], { queryParams: { productId: this.product.id ,productType:this.productType }});
+}
 }
