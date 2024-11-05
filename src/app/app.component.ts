@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart, RoutesRecognized } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Language, LanguageServiceService } from '@service/shared/language-service.service';
@@ -12,14 +13,20 @@ import { Subscription , filter, pairwise} from 'rxjs';
 export class AppComponent {
 
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     private router: Router,
-    private lanS: LanguageServiceService,
+    public LanguageService: LanguageServiceService,
     private TranslateService: TranslateService,
   ) { }
 
   ngOnInit() {
 
+    let htmlTag = this.document.getElementsByTagName(
+      'html'
+    )[0] as HTMLHtmlElement;
 
+    htmlTag.dir = this.LanguageService.currentLang === 'ar' ? 'rtl' : 'ltr';
+    htmlTag.lang = this.LanguageService.currentLang;
 
     // this.router.events
     // .pipe(

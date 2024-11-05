@@ -13,20 +13,22 @@ import { AboutComponent } from './home/about/about.component';
 import { ContactSectionComponent } from './home/contact-section/contact-section.component';
 import { CoverComponent } from './home/cover/cover.component';
 import { HomeComponent } from './home/home.component';
-import { GraniteComponent } from './home/product/granite/granite.component';
-import { MarbelComponent } from './home/product/marbel/marbel.component';
+import { GraniteComponent } from './shared/product-list/granite/granite.component';
+import { MarbelComponent } from './shared/product-list/marbel/marbel.component';
 import { ProjectsComponent } from './home/projects/projects.component';
 import { CountUpModule } from 'ngx-countup';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ProductComponent } from './home/product/product.component';
+import { ProductDetailsComponent } from './shared/product-details/product-details.component';
+
 import { LightboxModule } from 'ngx-lightbox';
 import { ServicesComponent } from './home/services/services.component';
-import { StonesComponent } from './home/product/stones/stones.component';
+import { StonesComponent } from './shared/product-list/stones/stones.component';
 import { ContactUsFormComponent } from './contact-us/contact-us-form/contact-us-form.component';
 import { TeamsComponent } from './contact-us/teams/teams.component';
 import { CoverContactComponent } from './shared/cover-contact/cover-contact.component';
 import { PackingComponent } from './packing/packing.component';
+import { ProductListComponent } from './shared/product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import { PackingComponent } from './packing/packing.component';
     ProductComponent,
     StonesComponent,
     CoverContactComponent,
-    PackingComponent
+    PackingComponent,
+    ProductListComponent
   ],
   imports: [
     CommonModule,

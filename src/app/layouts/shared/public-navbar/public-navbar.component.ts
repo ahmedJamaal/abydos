@@ -24,17 +24,17 @@ packingList:any[]=PACKING_LIST;
     this.currentLanguage = this.LanguageService.activeCurrentLanguage;
 
 
-  let packages = this.marbelList.reduce((result, item) => {
-    result[item.id] = item.name;
-    return result;
-}, {});
-  console.log(packages);
+//   let packages = this.marbelList.reduce((result, item) => {
+//     result[item.id] = item.name;
+//     return result;
+// }, {});
+//   console.log(packages);
 
 
-  console.log(MARBLE_LIST); // 7
-  console.log(GRANITE_LIST); // 10
-  console.log(STONES_LIST); //5
-  console.log(PACKING_LIST); // 4
+//   console.log(MARBLE_LIST); // 7
+//   console.log(GRANITE_LIST); // 10
+//   console.log(STONES_LIST); //5
+//   console.log(PACKING_LIST); // 4
 
   }
 

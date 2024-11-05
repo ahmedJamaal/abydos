@@ -12,24 +12,25 @@ export class LanguageServiceService {
   private localStorageKey: string = `${environment.CurrentLang}`;
   currentLang: string = Language.arabic;
   constructor(public translate: TranslateService) {
-    
+
 
     this.translate.addLangs([Language.english, Language.arabic]);
 
-    const theme: any = localStorage.getItem(environment.CurrentLang);
+    const lang: any = localStorage.getItem(this.currentLang);
+console.log(lang);
 
 
-    if (theme) {
-      this.currentLang = JSON.parse(theme);
+    if (lang) {
+      this.currentLang = JSON.parse(lang);
     } else {
-      this.currentLang = Language.arabic;
+      this.currentLang = Language.english;
       localStorage.setItem(
-        environment.CurrentLang,
-        JSON.stringify(Language.arabic)
+        this.currentLang,
+        JSON.stringify(Language.english)
       );
     }
     this.translate.setDefaultLang(this.currentLang);
-    
+
 
   }
   public get activeCurrentLanguage(): string {

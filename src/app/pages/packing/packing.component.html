@@ -1,5 +1,6 @@
 
 <!-- /.container -->
+
 <section class="packing py-5">
   <div class="container px-4 px-lg-5 my-5" *ngIf="!isLoading">
     <div class="row gx-4 gx-lg-5 align-items-start">
@@ -17,12 +18,14 @@
         <h1 class="display-6 fw-bolder">{{isEnglish ? packing.heading : packing.headingAr}}</h1>
         <p>{{isEnglish ? packing.description : packing.descriptionAr}}</p>
         <ul>
-          <span ngIf="isEnglish">
+          <span *ngIf="isEnglish">
 
             <li *ngFor="let d of packing.details">{{d | translate}}</li>
           </span>
-          <li *ngFor="let d of packing.details">{{d | translate}}</li>
-          <span ngIf="isEnglish"></span>
+          <span *ngIf="!isEnglish">
+
+            <li *ngFor="let d of packing.detailsAr">{{d | translate}}</li>
+          </span>
 
         </ul>
       </div>
