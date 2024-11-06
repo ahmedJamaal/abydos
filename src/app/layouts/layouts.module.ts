@@ -23,7 +23,6 @@ import { AlertsComponent } from './shared/alerts/alerts.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
-import { LanguageSelectComponent } from './shared/language-select/language-select.component';
 import { ProductCardComponent } from './shared/product-card/product-card.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { DigitTransformPipe } from '@service/pipe/digit-transform.pipe';
@@ -35,8 +34,6 @@ import { DigitTransformPipe } from '@service/pipe/digit-transform.pipe';
     AlertsComponent,
     PublicLayoutComponent,
     PublicNavbarComponent,
-    LanguageSelectComponent,
-
     DigitTransformPipe,
     ProductCardComponent
   ],

@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart, RoutesRecognized } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { Language, LanguageServiceService } from '@service/shared/language-service.service';
+import { Language, LanguageService } from '@service/shared/language.service';
 import { Subscription , filter, pairwise} from 'rxjs';
 // import 'rxjs/add/operator/filter';
 @Component({
@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private router: Router,
-    public LanguageService: LanguageServiceService,
+    public LanguageService: LanguageService,
     private TranslateService: TranslateService,
   ) { }
 

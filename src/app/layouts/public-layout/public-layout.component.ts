@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { environment } from '@environments/environment';
-import { LanguageServiceService } from '@service/shared/language-service.service';
+import { LanguageService } from '@service/shared/language.service';
 import { filter } from 'rxjs';
 
 @Component({
@@ -16,7 +16,7 @@ export class PublicLayoutComponent {
 isShowBackTop:boolean = false;
 currentRoute: string = '';
   constructor(
-    public LanguageService: LanguageServiceService,
+    public LanguageService: LanguageService,
     private router: Router,
     private titleService: Title,
   ) {

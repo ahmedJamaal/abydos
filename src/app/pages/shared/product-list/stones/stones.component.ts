@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Split_Catalog } from '@model/Constant/cataloge';
-import { LanguageServiceService } from '@service/shared/language-service.service';
+import { LanguageService } from '@service/shared/language.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -44,6 +44,6 @@ export class StonesComponent {
   };
 
   constructor(
-    private LanguageService: LanguageServiceService
+    private LanguageService: LanguageService
   ) { }
 }

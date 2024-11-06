@@ -29,6 +29,7 @@ import { CoverContactComponent } from './shared/cover-contact/cover-contact.comp
 import { PackingComponent } from './packing/packing.component';
 import { ProductListComponent } from './shared/product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { FeaturesComponent } from './home/features/features.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ProductComponent } from './product/product.component';
     StonesComponent,
     CoverContactComponent,
     PackingComponent,
-    ProductListComponent
+    ProductListComponent,
+    FeaturesComponent
   ],
   imports: [
     CommonModule,

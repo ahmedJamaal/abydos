@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { LanguageServiceService } from '@service/shared/language-service.service';
+import { LanguageService } from '@service/shared/language.service';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-cover',
   templateUrl: './cover.component.html',
-  styleUrls: ['./cover.component.scss']
+  styleUrls: ['./cover.component.css']
 })
 export class CoverComponent {
   images:any[]=[
@@ -21,7 +21,7 @@ export class CoverComponent {
 
   ]
   constructor(
-    private LanguageService: LanguageServiceService
+    private LanguageService: LanguageService
   ) {}
   customOptions: OwlOptions = {
     autoplay: true,

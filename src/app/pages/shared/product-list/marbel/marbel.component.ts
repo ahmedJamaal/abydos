@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Marble_Catalog } from '@model/Constant/cataloge';
-import { LanguageServiceService } from '@service/shared/language-service.service';
+import { LanguageService } from '@service/shared/language.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -43,6 +43,6 @@ export class MarbelComponent {
   };
 
   constructor(
-    private LanguageService: LanguageServiceService
+    private LanguageService: LanguageService
   ) { }
 }

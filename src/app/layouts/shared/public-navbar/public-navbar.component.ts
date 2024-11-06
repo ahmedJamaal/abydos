@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '@model/Constant/product';
 import { GRANITE_LIST, MARBLE_LIST, PACKING_LIST, STONES_LIST } from '@model/Constant/productList';
-import { LanguageServiceService } from '@service/shared/language-service.service';
+import { LanguageService } from '@service/shared/language.service';
 
 @Component({
   selector: 'app-public-navbar',
@@ -16,33 +16,22 @@ marbelList:any[]=MARBLE_LIST;
 graniteList:any[]=GRANITE_LIST;
 stonesList:any[]=STONES_LIST;
 packingList:any[]=PACKING_LIST;
+
+languageList: any[] = [
+  { name: 'English', image: 'assets/images/flags/en.png', value: 'en' },
+  { name: 'Arabic', image: 'assets/images/flags/ar.png', value: 'ar' }
+];
   constructor(
     private router: Router,
-    public LanguageService: LanguageServiceService
+    public LanguageService: LanguageService
   ) {}
   ngOnInit(): void {
     this.currentLanguage = this.LanguageService.activeCurrentLanguage;
-
-
-//   let packages = this.marbelList.reduce((result, item) => {
-//     result[item.id] = item.name;
-//     return result;
-// }, {});
-//   console.log(packages);
-
-
-//   console.log(MARBLE_LIST); // 7
-//   console.log(GRANITE_LIST); // 10
-//   console.log(STONES_LIST); //5
-//   console.log(PACKING_LIST); // 4
-
   }
-
- convertArrayToJSON(array:any[]) {
-    return array.reduce((result, item) => {
-        result[item.id] = item.name;
-        return result;
-    }, {});
+  changeLanguage(language: string) {
+    setTimeout(() => {
+      window.location.reload();
+      this.LanguageService.toggleLanguage(language);
+    }, 1000);
 }
-
 }

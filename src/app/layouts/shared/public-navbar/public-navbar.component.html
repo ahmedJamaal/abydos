@@ -65,10 +65,30 @@
                <div class="d-flex navbar-align">
                 <span class="nav-item dropdown has-arrow flag-nav" ngbDropdown>
                   <a class="nav-link dropdown-toggle" ngbDropdownToggle>
-                    <img src="assets/images/flags/{{ currentLanguage }}.png" alt="" height="16" class="px-2" />
-                    <span>{{ currentLanguage === "ar" ? ("Arabic" | translate) : ("English" | translate) }}</span>
+                    <img
+                    src="assets/images/flags/{{ currentLanguage }}.png"
+                    alt=""
+                    height="16"
+                    class="px-2" />
+                  <span
+                    >{{ currentLanguage === "ar" ? ("Arabic" | translate) : ("English" |
+                    translate) }}</span
+                  >
                   </a>
-                  <app-language-select></app-language-select>
+                  <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                    <a
+                      ngbDropdownItem
+                      class="dropdown-item"
+                      *ngFor="let lang of languageList"
+                      (click)="changeLanguage(lang.value)">
+                      <img
+                        [src]="lang.image"
+                        alt="{{ lang.name }}"
+                        height="16"
+                        class="px-2" />
+                      {{ lang.name | translate }}
+                    </a>
+                  </div>
                 </span>
                </div>
                 </div>
