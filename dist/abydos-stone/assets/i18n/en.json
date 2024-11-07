@@ -143,5 +143,27 @@
   "yellow_verdi": "Yellow Verdi",
   "dimension": "Dimension",
   "Soical_Network": "Soical Media",
-  "Packing": "Packing"
+  "Packing": "Packing",
+"Blocks":"Blocks",
+"Tiles":"Tiles",
+"Flooring":"Flooring",
+"Bathrooms":"Bathrooms",
+"Staircases":"Staircases",
+"Fireplaces":"Fireplaces",
+"Exterior":"Exterior",
+
+
+"Aswan":"Aswan",
+"Egypt":"Egypt",
+"Egyptian desert":"Egyptian Desert",
+"Menia":"Menia",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan",
+"Aswan":"Aswan"
 }

@@ -4,29 +4,12 @@
       <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">{{'Our_Services' | translate}}</p>
       <h1 class="display-6 mb-5">{{'service_sub' | translate}}</h1>
   </div>
-  <div class="row g-5 align-items-center wow fadeInUp py-2" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"
-        *ngFor="let service of servicesList;let i=index"   [attr.data-index]="i">
-      <ng-container *ngIf="i%2==0" class="d-flex">
+  <div class="row g-5 align-items-center wow fadeInUp py-2" data-wow-delay="0.3s"
+  style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+</div>
+<span *ngFor="let service of servicesList;let i=index"   [attr.data-index]="i"  class="d-flex justify-content-center align-items-center p-2"
+[ngClass]="i%2 == 0 ? 'row' : 'row flex-sm-row flex-md-row-reverse flex-lg-row-reverse flex-xl-row-reverse'">
 
-     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-      <h3 class="mb-4">{{service.heading | translate}}</h3>
-      <h5 class="mb-2">{{service.subHeading | translate}}</h5>
-      <p class="mb-4">
-        {{service.description | translate}}
-      </p>
-
-
-     </div>
-     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-      <div class="image-container">
-       <img [src]="service.image"
-       loading="lazy"
-
-       class="img-fluid  rounded service-img  mb-3 mb-md-0 p-3">
-      </div>
-    </div>
-      </ng-container>
-      <ng-container *ngIf="i%2!=0" class="d-flex">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
        <div class="image-container">
         <img [src]="service.image"
@@ -45,7 +28,6 @@
 
      </div>
 
-      </ng-container>
-  </div>
+    </span>
 </div>
 </section>
