@@ -23,7 +23,7 @@
           </div>
           <div class="col-md-6">
             <h1 class="display-6 fw-bolder">{{currentLanguage === "en" ?   product.headerText : product.headerTextAr}}</h1>
-            <div class="small mb-1 font-weight-bold">{{product.specification.type | translate}}</div>
+            <div class="small mb-3 font-weight-bold">{{product.specification.type | translate}}</div>
 
               <span *ngIf="currentLanguage === 'en'">
                 <p class="lead" *ngFor="let des of product.description">
@@ -38,52 +38,54 @@
 
 
                 <div class="row mb-3">
-                  <div class="col-md-6">
+                  <div class=" col-md-6 col-6">
                     <h5 class="text-primary">{{'Stone Kind' | translate}}:</h5>
                     <p>{{currentLanguage === "en" ?   product.specification.material_name : product.specification.material_nameAr}}</p>
                   </div>
-                  <div class="col-md-6">
+                  <div class=" col-md-6 col-6">
                     <h5 class="text-primary">{{'Material Name' | translate}}:</h5>
                     <p>{{currentLanguage === "en" ? product.specification.material_name : product.specification.material_nameAr}}</p>
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <div class="col-md-6">
-                    <h5 class="text-primary">{{'Color' | translate}}:</h5>
-                    <p>{{product.specification.Color | translate}}</p>
+                  <div class=" col-md-6 col-6">
+                    <h5 class="text-primary">{{'Quarry Location'| translate}}:</h5>
+                    <p>{{product.specification.Quarry_location | translate}}</p>
                   </div>
-                  <div class="col-md-6">
+                  <div class=" col-md-6 col-6">
                     <h5 class="text-primary">{{'Country Of Origin'| translate}}:</h5>
                     <p>{{product.specification.country | translate}}</p>
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <div class="col-md-6">
-                    <h5 class="text-primary">{{'Quarry Location'| translate}}:</h5>
-                    <p>{{product.specification.Quarry_location | translate}}</p>
+
+                  <div class="col-md-6 col-12">
+                    <h5 class="text-primary">{{'Color' | translate}}:</h5>
+                    <p>{{product.specification.Color | translate}}</p>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-12">
                     <h5 class="text-primary">{{'Material Availability'| translate}}:</h5>
                     <p>{{product.specification.Availability.join(', ') | translate}}</p>
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <div class="col-md-6"  *ngIf="product.specification?.dimension">
-                    <h5 class="text-primary">{{'dimension' | translate}}:</h5>
-                    <p>{{product.specification.dimension}}</p>
-                  </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 col-6">
                     <h5 class="text-primary">{{'Available Tiles Thickness' | translate}}:</h5>
                     <p>{{product.specification.Thickness.join('cm, ')+'cm'}}</p>
 
                   </div>
+                  <div class="col-md-6  col-6"  *ngIf="product.specification?.dimension">
+                    <h5 class="text-primary">{{'dimension' | translate}}:</h5>
+                    <p>{{product.specification.dimension}}</p>
+                  </div>
                 </div>
-
-                <h5 class="text-primary">{{'Applications' | translate}}:</h5>
-                <p>{{'Exterior & Interior' | translate}} ({{product.specification.Applications.join(', ') | translate}})</p>
+                <div class="row mb-3 col-12">
+                  <h5 class="text-primary">{{'Applications' | translate}}:</h5>
+                  <p>{{'Exterior & Interior' | translate}} ({{product.specification.Applications.join(', ') | translate}})</p>
+                </div>
 
 
           </div>

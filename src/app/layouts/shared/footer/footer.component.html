@@ -1,11 +1,11 @@
     <!-- Footer Start -->
 
-    <div class="container-fluid bg-primary text-light footer wow fadeIn"
+    <footer class="container-fluid bg-primary text-light footer wow fadeIn"
     [dir]="LanguageService.currentLang === 'en' ? 'ltr' : 'rtl'"
     data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
       <div class="container-xxl py-5 px-lg-5">
-          <div class="row justify-content-around">
-              <div class="col-md-6 col-lg-4">
+          <div class="row justify-content-start g-5 justify-content-lg-around justify-content-md-around">
+              <div class="col-md-6 col-lg-4 col-12">
                 <h4 class="text-white mb-2">{{'Our_Office' | translate}}</h4>
                 <p class="mb-2"><i class="bi bi-geo-alt  me-3"></i>{{'Address_loc' | translate}}</p>
                 <p class="mb-2"><i class="bi bi-building  me-3"></i>{{'Working_Time' | translate}}</p>
@@ -27,13 +27,13 @@
               </div>
 
               </div>
-              <div class="col-md-6 col-lg-2">
+              <div class="col-md-6 col-lg-2 col-6">
                 <h4 class="text-white mb-2">{{'Quick Links' | translate}}</h4>
                 <a class="btn btn-link" routerLink="/">{{'Home' | translate}}</a>
                 <a class="btn btn-link" routerLink="#About_Us">{{'about_us'| translate}}</a>
                 <a class="btn btn-link" routerLink="#Service">{{'services'| translate}}</a>
 
-                <h4 class="text-white mb-2">{{'Marble' | translate}}</h4>
+                <h4 class="text-white mb-2 py-3">{{'Marble' | translate}}</h4>
 
                 <a
                 *ngFor="let marbel of marbelList"
@@ -43,7 +43,7 @@
 
 
                 </div>
-              <div class="col-md-6 col-lg-2">
+              <div class="col-md-6 col-lg-2 col-6">
                 <h4 class="text-white mb-2">{{'Splite_Face' | translate}}</h4>
 
                 <a
@@ -53,7 +53,7 @@
                 class="btn btn-link">{{currentLanguage === "en" ?  stone.name : stone.nameAr}}</a>
 
 
-                <h4 class="text-white mb-2 pt-2">{{'Packing' | translate}}</h4>
+                <h4 class="text-white mb-2 py-3">{{'Packing' | translate}}</h4>
 
                 <a
                 *ngFor="let packing of packingList"
@@ -62,7 +62,7 @@
                 class="btn btn-link">{{currentLanguage === "en" ? packing.heading : packing.headingAr}}</a>
 
               </div>
-            <div class="col-md-6 col-lg-2">
+            <div class="col-md-6 col-lg-2 col-6">
               <h4 class="text-white mb-2">{{'Granite' | translate}}</h4>
               <a
               *ngFor="let granite of graniteList"

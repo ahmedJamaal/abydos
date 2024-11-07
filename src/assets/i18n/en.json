@@ -64,8 +64,8 @@
   "Country Of Origin": "Country Of Origin",
   "Quarry Location": "Quarry Location",
   "Material Availability": "Material Availability",
-  "Available Slabs Thickness": "Available Slabs Thickness",
-  "Available Tiles Thickness": "Available Tiles Thickness",
+  "Available Slabs Thickness": "Slabs Thickness",
+  "Available Tiles Thickness": "Tiles Thickness",
   "Available Surface Finishes": "Available Surface Finishes",
   "Applications": "Applications",
   "Abydos_Stone": "Abydos Stone",
@@ -103,7 +103,6 @@
   "halayeb": "Halayeb",
   "safaga": "Safaga",
   "galala": "Galala",
-  "sunny_menia": "Sunny Menia",
   "silvia": "Silvia",
   "triesta": "Triesta",
   "milly": "Milly",
@@ -156,14 +155,6 @@
 "Aswan":"Aswan",
 "Egypt":"Egypt",
 "Egyptian desert":"Egyptian Desert",
-"Menia":"Menia",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan",
-"Aswan":"Aswan"
+"Menia":"Menia"
+
 }

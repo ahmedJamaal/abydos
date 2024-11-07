@@ -616,13 +616,13 @@ export const GRANITE_LIST: Product[] = [
 export const STONES_LIST: any[] = [
   {
     id: "Sunny_Shikh_Fadl",
-    name: "Sunny_Shikh_Fadl",
+    name: "Sunny Shikh Fadl",
     nameAr: "صني شيح فضل",  // Arabic translation
     image: "/Sunny_Shikh_Fadl/main-image.jpg",
     imagesUrl: [
       "/Sunny_Shikh_Fadl/Sunny_Shikh_Fadl (1).jpg",
     ],
-    headerText: "Sunny_Shikh_Fadl",
+    headerText: "Sunny Shikh Fadl",
     headerTextAr: "صني شيح فضل",  // Arabic translation
     description: [],
     descriptionAr: [],  // Arabic translation
@@ -655,7 +655,7 @@ export const STONES_LIST: any[] = [
   },
   {
     id: "Sunny_Menia",
-    name: "Sunny_Menia",
+    name: "Sunny Menia",
     nameAr: "صني مينا",  // Arabic translation
     image: "/Sunny_Menia/main-image.jpg",
     imagesUrl: [
@@ -666,7 +666,7 @@ export const STONES_LIST: any[] = [
       "/Sunny_Menia/Sunny_Menia (5).jpg",
       "/Sunny_Menia/Sunny_Menia (6).jpg",
     ],
-    headerText: "Sunny_Menia",
+    headerText: "Sunn Menia",
     headerTextAr: "صني مينا",  // Arabic translation
     description: [],
     descriptionAr: [],  // Arabic translation

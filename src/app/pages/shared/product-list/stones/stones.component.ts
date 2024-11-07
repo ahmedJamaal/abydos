@@ -28,15 +28,15 @@ export class StonesComponent {
         ],
         responsive: {
           0:{
+            items:1
+        },
+        400:{
             items:2
         },
-        576:{
+        740:{
             items:3
         },
-        768:{
-            items:3
-        },
-        992:{
+        940:{
             items:4
         }
         },
