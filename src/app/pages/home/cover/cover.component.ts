@@ -5,7 +5,7 @@ import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-cover',
   templateUrl: './cover.component.html',
-  styleUrls: ['./cover.component.css']
+  styleUrls: ['./cover.component.scss']
 })
 export class CoverComponent {
   images:any[]=[

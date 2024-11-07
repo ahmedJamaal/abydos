@@ -15,9 +15,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="navbar-nav navbar-align p-4 p-lg-1 mx-2 w-100">
-                  <a  href="#intro" class="nav-item nav-link"  [routerLink]="['/']">{{'Home' | translate}}</a>
-                  <a href="#About_Us" class="nav-item nav-link" [routerLink]="['/']">{{'about_us'| translate}}</a>
-                  <a class="nav-item nav-link" href="#Service" [routerLink]="['/']">{{'services'| translate}}</a>
+                  <a   (click)="scrollToAnchor('intro')"  class="nav-item nav-link"  >{{'Home' | translate}}</a>
+                  <a (click)="scrollToAnchor('About_Us')" class="nav-item nav-link" >{{'about_us'| translate}}</a>
+                  <a class="nav-item nav-link"  (click)="scrollToAnchor('Service')">{{'services'| translate}}</a>
                   <div class="nav-item dropdown">
                       <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Marble'| translate}}</a>
                       <div class="dropdown-menu border-light m-0">
@@ -25,7 +25,7 @@
                           *ngFor="let marbel of marbelList"
                           [routerLink]="['/Product']"
                           [queryParams]="{ productId: marbel.id , productType:marbel.specification.type}"
-                          class="dropdown-item">{{marbel.name| translate}}</a>
+                          class="dropdown-item">{{currentLanguage === "en" ?  marbel.name : marbel.nameAr}}</a>
                       </div>
                   </div>
                   <div class="nav-item dropdown">
@@ -35,7 +35,7 @@
                           *ngFor="let granite of graniteList"
                           [routerLink]="['/Product']"
                           [queryParams]="{ productId: granite.id , productType:granite.specification.type}"
-                          class="dropdown-item">{{granite.name| translate}}</a>
+                          class="dropdown-item">{{currentLanguage === "en" ? granite.name : granite.nameAr}}</a>
                       </div>
                   </div>
                   <div class="nav-item dropdown">
@@ -45,7 +45,7 @@
                           *ngFor="let stone of stonesList"
                           [routerLink]="['/Product']"
                           [queryParams]="{ productId: stone.id , productType:stone.specification.type}"
-                          class="dropdown-item">{{stone.name| translate}}</a>
+                          class="dropdown-item">{{currentLanguage === "en" ? stone.name : stone.nameAr}}</a>
                       </div>
                   </div>
                   <div class="nav-item dropdown">
@@ -55,7 +55,7 @@
                           *ngFor="let packing of packingList"
                           [routerLink]="['/Packing']"
                           [queryParams]="{ packing: packing.heading}"
-                          class="dropdown-item">{{packing.heading| translate}}</a>
+                          class="dropdown-item">{{currentLanguage === "en" ? packing.heading : packing.headingAr}}</a>
                       </div>
                   </div>
                   <a routerLink="/Contact-US" class="nav-item nav-link">{{'Contact_Us'| translate}}</a>
@@ -76,10 +76,12 @@
                   >
                   </a>
                   <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+
                     <a
                       ngbDropdownItem
                       class="dropdown-item"
                       *ngFor="let lang of languageList"
+                      [disabled]="currentLanguage === lang.value ? true : false"
                       (click)="changeLanguage(lang.value)">
                       <img
                         [src]="lang.image"

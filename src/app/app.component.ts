@@ -17,6 +17,7 @@ export class AppComponent {
     private router: Router,
     public LanguageService: LanguageService,
     private TranslateService: TranslateService,
+
   ) { }
 
   ngOnInit() {

@@ -11,18 +11,17 @@ import { LanguageService } from '@service/shared/language.service';
 })
 export class FooterComponent {
   appLink=environment;
+  currentLanguage!: string;
   marbelList:any[]=MARBLE_LIST;
 graniteList:any[]=GRANITE_LIST;
 stonesList:any[]=STONES_LIST;
 packingList:any[]=PACKING_LIST;
-isEnglish!:boolean;
+
   constructor(
     public translateService:TranslateService,
     public LanguageService: LanguageService
   ) {
-    console.log(this.translateService.getBrowserLang());
-
-    this.isEnglish = this.translateService.getBrowserLang() ==='en' ? true : false;
+    this.currentLanguage = this.LanguageService.activeCurrentLanguage;
 
   }
 }

@@ -22,15 +22,15 @@
           </div>
           </div>
           <div class="col-md-6">
-            <h1 class="display-6 fw-bolder">{{product.headerText | translate}}</h1>
+            <h1 class="display-6 fw-bolder">{{currentLanguage === "en" ?   product.headerText : product.headerTextAr}}</h1>
             <div class="small mb-1 font-weight-bold">{{product.specification.type | translate}}</div>
 
-              <span *ngIf="isEnglish">
+              <span *ngIf="currentLanguage === 'en'">
                 <p class="lead" *ngFor="let des of product.description">
                   {{des}}
                 </p>
               </span>
-              <span *ngIf="!isEnglish">
+              <span *ngIf="currentLanguage === 'ar'">
                 <p class="lead" *ngFor="let des of product.descriptionAr">
                   {{des}}
                 </p>
@@ -40,11 +40,11 @@
                 <div class="row mb-3">
                   <div class="col-md-6">
                     <h5 class="text-primary">{{'Stone Kind' | translate}}:</h5>
-                    <p>{{product.specification.material_name | translate}}</p>
+                    <p>{{currentLanguage === "en" ?   product.specification.material_name : product.specification.material_nameAr}}</p>
                   </div>
                   <div class="col-md-6">
                     <h5 class="text-primary">{{'Material Name' | translate}}:</h5>
-                    <p>{{this.isEnglish ? product.specification.material_name : product.specification.material_nameAr}}</p>
+                    <p>{{currentLanguage === "en" ? product.specification.material_name : product.specification.material_nameAr}}</p>
                   </div>
                 </div>
 
@@ -66,7 +66,7 @@
                   </div>
                   <div class="col-md-6">
                     <h5 class="text-primary">{{'Material Availability'| translate}}:</h5>
-                    <p>{{product.specification.Availability.join(', ')}}</p>
+                    <p>{{product.specification.Availability.join(', ') | translate}}</p>
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@
                 </div>
 
                 <h5 class="text-primary">{{'Applications' | translate}}:</h5>
-                <p>{{'Exterior & Interior' | translate}} ({{product.specification.Applications.join(', ')}})</p>
+                <p>{{'Exterior & Interior' | translate}} ({{product.specification.Applications.join(', ') | translate}})</p>
 
 
           </div>

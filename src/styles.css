@@ -310,60 +310,6 @@ h6,
 
 
 
-/*** Footer ***/
-.footer {
-
-    background: var(--tertiary);
-}
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: start;
-    color: var(--light);
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-    text-decoration:none;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\F234";
-    font-family: 'bootstrap-icons';
-    font-weight: 700;
-    margin: 0 5px 0 5px;
-}
-.footer[dir=ltr]  .btn.btn-link::before {
-  content: "\F234";
-  }
-.footer[dir=rtl]  .btn.btn-link::before {
-  content: "\F230";
-  }
-
-
-
-.footer .btn.btn-link:hover {
-    color: var(--primary);
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.copyright {
-    color: var(--bs-heading-color);
-
-    background: var(--white);
-}
-
-.copyright a {
-    color: var(--primary);
-}
-
-.copyright a:hover {
-    color: var(--dark);
-}
-
-
 
 
 .forget-wrapper {

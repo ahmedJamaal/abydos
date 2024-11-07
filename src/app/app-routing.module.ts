@@ -12,12 +12,12 @@ const routes: Routes = [
 
   {
     path: "**",
-    redirectTo: "/Error/404"
+    redirectTo: "/404"
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' ,  useHash: false })],
+  imports: [RouterModule.forRoot(routes, {  scrollPositionRestoration: 'top' ,useHash: true ,  anchorScrolling: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

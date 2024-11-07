@@ -66,7 +66,7 @@ export const MARBLE_LIST: Product[] = [
       material_nameAr: "صني منيا",
       Color: "Beige with golden veins",
       country: "Egypt",
-      Quarry_location: "Egyptian desert",
+      Quarry_location: "Menia",
       Availability: ["Blocks", "Slabs", "Tiles"],
       Thickness: [15, 20, 30],
       Applications: ["Flooring", "Bathrooms", "Staircases", "Fireplaces", "Exterior"]

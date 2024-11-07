@@ -15,14 +15,14 @@
         >
       </div>
       <div class="col-md-6 pt-2">
-        <h1 class="display-6 fw-bolder">{{isEnglish ? packing.heading : packing.headingAr}}</h1>
-        <p>{{isEnglish ? packing.description : packing.descriptionAr}}</p>
+        <h1 class="display-6 fw-bolder mb-4">{{currentLanguage === 'en'  ? packing.heading : packing.headingAr}}</h1>
+        <h5 class="mb-3">{{currentLanguage === 'en'  ? packing.description : packing.descriptionAr}}</h5>
         <ul>
-          <span *ngIf="isEnglish">
+          <span *ngIf="currentLanguage === 'en' ">
 
             <li *ngFor="let d of packing.details">{{d | translate}}</li>
           </span>
-          <span *ngIf="!isEnglish">
+          <span *ngIf="currentLanguage === 'ar' ">
 
             <li *ngFor="let d of packing.detailsAr">{{d | translate}}</li>
           </span>
