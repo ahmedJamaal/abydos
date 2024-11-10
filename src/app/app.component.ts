@@ -22,21 +22,15 @@ export class AppComponent {
 
   ngOnInit() {
 
-    let htmlTag = this.document.getElementsByTagName(
-      'html'
-    )[0] as HTMLHtmlElement;
+    const htmlTag = this.document.getElementsByTagName('html')[0] as HTMLHtmlElement;
+    const body = this.document.getElementsByTagName('body')[0] as HTMLBodyElement;
+// console.log(body);
+// console.log(htmlTag);
 
     htmlTag.dir = this.LanguageService.currentLang === 'ar' ? 'rtl' : 'ltr';
     htmlTag.lang = this.LanguageService.currentLang;
-
-    // this.router.events
-    // .pipe(
-    //   filter(e => e instanceof NavigationEnd),
-    //   pairwise() // check it's second route load
-    // )
-    // .subscribe((e: any[]) => {
-    //   window.scrollTo(0, 0);
-    // });
+    body.dir = this.LanguageService.currentLang === 'ar' ? 'rtl' : 'ltr';
+    body.lang = this.LanguageService.currentLang;
   }
 
 }

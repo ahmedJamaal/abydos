@@ -1,26 +1,32 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-
-
       <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary  py-lg-0 px-xl-5 px-lg-2 wow fadeIn"
       data-wow-delay="0.1s" [dir]="currentLanguage === 'en' ? 'ltr' : 'rtl'">
         <a routerLink="/" class="navbar-brand ms-4 ms-lg-0">
           <img   class="w-100" alt="Logo" [src]="'assets/images/logo.png'"
           loading="lazy"  >
        </a>
-          <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse">
+          <button type="button" class="navbar-toggler me-4"
+                data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              (click)="navbarCollapsed.classList.toggle('show')"
+              >
               <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="collapse navbar-collapse" id="navbarCollapse" #navbarCollapsed>
               <div class="navbar-nav navbar-align p-4 p-lg-1 mx-2 w-100">
                   <a   (click)="scrollToAnchor('intro')"  class="nav-item nav-link"  >{{'Home' | translate}}</a>
                   <a (click)="scrollToAnchor('About_Us')" class="nav-item nav-link" >{{'about_us'| translate}}</a>
                   <a class="nav-item nav-link"  (click)="scrollToAnchor('Service')">{{'services'| translate}}</a>
                   <div class="nav-item dropdown">
-                      <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Marble'| translate}}</a>
-                      <div class="dropdown-menu border-light m-0">
+                      <a  class="nav-link dropdown-toggle"
+                      (click)="isChangeSelected('Marble')"
+                      data-bs-toggle="dropdown">{{'Marble'| translate}}</a>
+                      <div class="dropdown-menu border-light m-0" [ngClass]="isSelected === 'Marble' ? 'show' : ''">
                           <a
                           *ngFor="let marbel of marbelList"
                           [routerLink]="['/Product']"
@@ -29,8 +35,12 @@
                       </div>
                   </div>
                   <div class="nav-item dropdown">
-                      <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Granite'| translate}}</a>
-                      <div class="dropdown-menu border-light m-0">
+                      <a  class="nav-link menu-item dropdown-toggle"
+                      id="Granite"
+                      aria-haspopup="true" aria-expanded="false"
+                      (click)="isChangeSelected('Granite')"
+                      data-bs-toggle="dropdown">{{'Granite'| translate}}</a>
+                      <div class="dropdown-menu border-light m-0" aria-labelledby="Granite" [ngClass]="isSelected === 'Granite' ? 'show' : ''">
                           <a
                           *ngFor="let granite of graniteList"
                           [routerLink]="['/Product']"
@@ -39,8 +49,8 @@
                       </div>
                   </div>
                   <div class="nav-item dropdown">
-                      <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Splite_Face'| translate}}</a>
-                      <div class="dropdown-menu border-light m-0">
+                      <a  (click)="isChangeSelected('Splite_Face')" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Splite_Face'| translate}}</a>
+                      <div class="dropdown-menu border-light m-0" [ngClass]="isSelected === 'Splite_Face' ? 'show' : ''">
                           <a
                           *ngFor="let stone of stonesList"
                           [routerLink]="['/Product']"
@@ -49,8 +59,8 @@
                       </div>
                   </div>
                   <div class="nav-item dropdown">
-                      <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Packing'| translate}}</a>
-                      <div class="dropdown-menu border-light m-0">
+                      <a (click)="isChangeSelected('Packing')" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{'Packing'| translate}}</a>
+                      <div class="dropdown-menu border-light m-0" [ngClass]="isSelected === 'Packing' ? 'show' : ''">
                           <a
                           *ngFor="let packing of packingList"
                           [routerLink]="['/Packing']"
@@ -60,9 +70,7 @@
                   </div>
                   <a routerLink="/Contact-US" class="nav-item nav-link">{{'Contact_Us'| translate}}</a>
 
-
-
-               <div class="d-flex navbar-align">
+               <div class="d-flex navbar-start">
                 <span class="nav-item dropdown has-arrow flag-nav" ngbDropdown>
                   <a class="nav-link dropdown-toggle" ngbDropdownToggle>
                     <img
@@ -96,6 +104,25 @@
                 </div>
 
           </div>
-      </nav>
+
+        </nav>
   </div>
   <!-- Navbar End -->
+    <li class="dropdown">
+
+              <a
+              (click)="isChangeSelected('Marble')"
+              [ngClass]="isSelected === 'Marble' ? 'active' : ''"
+              data-bs-toggle="dropdown">{{'Marble'| translate}}
+              <i class="bi bi-chevron-down dropdown-indicator"></i>
+            </a>
+              <ul [ngClass]="isSelected === 'Marble' ? 'dropdown-active' : ''">
+                  <a
+                  *ngFor="let marbel of marbelList"
+                  [routerLink]="['/Product']"
+                  [queryParams]="{ productId: marbel.id , productType:marbel.specification.type}"
+                  class="dropdown-item">{{currentLanguage === "en" ?  marbel.name : marbel.nameAr}}</a>
+
+          </ul>
+
+           </li>

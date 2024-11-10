@@ -16,7 +16,7 @@ marbelList:any[]=MARBLE_LIST;
 graniteList:any[]=GRANITE_LIST;
 stonesList:any[]=STONES_LIST;
 packingList:any[]=PACKING_LIST;
-
+isSelected!:string;
 languageList: any[] = [
   { name: 'English', image: 'assets/images/flags/en.png', value: 'en' },
   { name: 'Arabic', image: 'assets/images/flags/ar.png', value: 'ar' }
@@ -38,6 +38,11 @@ languageList: any[] = [
 goTo(location: string): void {
   window.location.hash = '';
   window.location.hash = location;
+}
+isChangeSelected(current:string){
+  console.log(current);
+
+  this.isSelected === current ? this.isSelected = '' : this.isSelected = current
 }
 scrollToAnchor(location: string): void {
   const element:Element | null = document.querySelector('#' + location);

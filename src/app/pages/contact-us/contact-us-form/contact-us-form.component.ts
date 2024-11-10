@@ -14,8 +14,9 @@ export class ContactUsFormComponent {
   form: FormGroup = this.fb.group({});
   isLoading: boolean = false;
   contactus!: ContactUs;
-isSuccess:boolean = false;
-  constructor(
+  isSuccess:boolean = false;
+
+   constructor(
     private fb: FormBuilder,
     private contactService: ContactUsService,
     private notificationService: NotificationService,
@@ -45,7 +46,7 @@ isSuccess:boolean = false;
 
   onSubmitForms() {
     // !this.auth.isTokenExpired() ?  this.onAddContactPublic() : this.onAddContactAdmin();
-    
+
   }
 
   onAddContactPublic() {
@@ -57,7 +58,7 @@ isSuccess:boolean = false;
           this.notificationService.SuccessNotification(this.translate.instant('Sent_Message_Successfully'));
 
         } else {
-          
+
 
           this.notificationService.WaringNotification(
             this.translate.instant('Field_Message_Successfully')
@@ -66,13 +67,13 @@ isSuccess:boolean = false;
         }
       },
       error: (err) => {
-        
+
 
         this.notificationService.ErrorNotification(`${err.message}`);
         this.isLoading = false;
       },
       complete: () => {
-        
+
 
         this.isLoading = false;
         this.form.reset();
@@ -92,7 +93,7 @@ isSuccess:boolean = false;
           this.notificationService.SuccessNotification(this.translate.instant('Sent_Message_Successfully'));
 
         } else {
-          
+
 
           this.notificationService.WaringNotification(
             this.translate.instant('Field_Message_Successfully')
@@ -101,13 +102,13 @@ isSuccess:boolean = false;
         }
       },
       error: (err) => {
-        
+
 
         this.notificationService.ErrorNotification(`${err.code}`);
         this.isLoading = false;
       },
       complete: () => {
-        
+
 
         this.isLoading = false;
         this.form.reset();

@@ -26,6 +26,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 import { ProductCardComponent } from './shared/product-card/product-card.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { DigitTransformPipe } from '@service/pipe/digit-transform.pipe';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DigitTransformPipe } from '@service/pipe/digit-transform.pipe';
     PublicLayoutComponent,
     PublicNavbarComponent,
     DigitTransformPipe,
-    ProductCardComponent
+    ProductCardComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
